@@ -1,0 +1,21 @@
+{
+  "name": "youtubedownloader",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prestart": "npm run build:tailwind",
+    "start": "node server/index.js",
+    "dev": "nodemon server/index.js",
+    "build:tailwind": "npx tailwindcss build in-style.css -o style.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "tailwindcss": "^1.4.6"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  }
+}

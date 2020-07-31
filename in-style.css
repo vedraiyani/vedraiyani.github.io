@@ -1,0 +1,128 @@
+/* @tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+@tailwind screens; */
+
+/*
+* custom-styles
+* 
+*/
+body{
+	@apply font-sans antialiased text-gray-900 leading-normal tracking-wider bg-cover;
+}
+
+.profile-container{
+	@apply max-w-4xl flex items-center h-auto flex-wrap mx-auto my-32;
+}
+.profile-container > #profile{
+	@apply w-full rounded-lg shadow-2xl bg-white opacity-75 mx-6;
+}
+.profile-container > #profile > div{
+	@apply p-4 text-center;
+}
+.profile-container > #profile > div > div:first-child{
+	@apply block rounded-full shadow-xl mx-auto -mt-16 h-48 w-48 bg-cover bg-center;
+}
+
+.name{
+	@apply text-3xl font-bold pt-8;
+}
+.name + div{
+	@apply mx-auto w-4/5 pt-3 border-b-2 border-teal-500 opacity-25;
+}
+
+.job{
+	@apply pt-4 text-base font-bold flex items-center justify-center;
+}
+p.job .icon{
+	@apply h-4 fill-current text-teal-700 pr-4;
+}
+
+.location{
+	@apply pt-2 text-gray-600 text-xs flex items-center justify-center;
+}
+p.location > .icon{
+	@apply h-4 fill-current text-teal-700 pr-4;
+}
+
+.short-inro{
+	@apply pt-8 text-sm;
+}
+
+.contact{
+	@apply pt-12 pb-8;
+}
+.contact > button{
+	@apply bg-teal-700 text-white font-bold py-2 px-4 rounded-full;
+}
+.contact > button:hover{
+	@apply bg-teal-900;
+}
+
+.footer{
+	@apply mt-6 pb-16 w-4/5 mx-auto flex flex-wrap items-center justify-between;
+}
+div.footer .social{
+	@apply h-6 fill-current text-gray-600;
+}
+div.footer .social:hover{
+	@apply text-teal-700;
+}
+
+.image-container{
+	@apply w-full;
+}
+.image-container > img{
+	@apply rounded-none shadow-2xl hidden;
+}
+
+.theme-change{
+	@apply absolute top-0 right-0 h-12 w-16 p-4;
+}
+.theme-change > button:focus{
+	@apply outline-none;
+}
+
+@screen md{	
+	.profile-container > #profile > div{
+		@apply p-12;
+	}
+}
+
+@screen lg {
+	.profile-container{
+		@apply h-screen my-0;
+	}
+	.profile-container > #profile{
+		@apply w-3/5 rounded-l-lg rounded-r-none mx-0;
+	}	
+	.profile-container > #profile > div{
+		@apply text-left;
+	}
+	.profile-container > #profile > div > div:first-child{
+		@apply hidden;
+	}
+	.name{
+		@apply pt-0;
+	}
+	.name + div{
+		@apply mx-0;
+	}
+	.job{
+		@apply justify-start;
+	}
+	.location{
+		@apply text-sm justify-start;
+	}
+	.footer{
+		@apply pb-0 w-full;
+	}.image-container{
+		@apply w-2/5;
+	}
+	.image-container > img{
+		@apply rounded-lg block;
+	}
+}
