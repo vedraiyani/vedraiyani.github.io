@@ -234,6 +234,9 @@ div.footer .social:hover{
 
   .name{
     padding-top: 0;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
   }
 
   .name + div{
